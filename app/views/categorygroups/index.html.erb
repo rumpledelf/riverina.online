@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<% content_for :title, "Categorygroups" %>
+
+<h1>Categorygroups</h1>
+
+<div id="categorygroups">
+  <% @categorygroups.each do |categorygroup| %>
+    <%= render categorygroup %>
+    <p>
+      <%= link_to "Show this categorygroup", categorygroup %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New categorygroup", new_categorygroup_path %>
