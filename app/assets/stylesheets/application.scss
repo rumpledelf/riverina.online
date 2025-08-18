@@ -1,14 +1,13 @@
-// Sassy
-@import "bootstrap";
-
 // sitewide fonts
 body {
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+  color: #1f2568;
   font-variation-settings:
-    "wdth" 100;
+    "width" 100;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -16,4 +15,54 @@ h1, h2, h3, h4, h5, h6 {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  text-align: center;
 }
+
+#header, #footer {
+  background-color: #ddd;
+  padding: 12px;
+  font-weight: 500;
+  .branding1 {
+    font-style: italic;
+  }
+  img {
+    float: left;
+    margin-right: 6px;
+  }
+  p {
+    margin: 0;
+    line-height: 100%;
+  }
+}
+#header {
+  border-bottom: 2px solid #1f2568;
+  img {
+    height: 64px;
+  }
+  .branding1 {
+    font-size: 90%;
+  }
+  .branding2 {
+    font-size: 120%;
+  }
+  .branding3 {
+    font-size: 150%;
+  }
+
+}
+
+#footer {
+  border-top: 2px solid #1f2568;
+  img {
+    height: 48px;
+  }
+  .branding1 {
+    font-size: 70%;
+  }
+  .branding2 {
+  }
+  .branding3 {
+    font-size: 120%;
+  }
+}
+

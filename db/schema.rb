@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2025_07_13_104053) do
-  create_table "categories", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.string "icon"
     t.text "description"
@@ -21,7 +21,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_13_104053) do
     t.index ["categorygroup_id"], name: "index_categories_on_categorygroup_id"
   end
 
-  create_table "categorygroups", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+  create_table "categorygroups", force: :cascade do |t|
     t.string "name"
     t.string "icon"
     t.text "description"
@@ -29,7 +29,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_13_104053) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "listings", charset: "utf8mb3", collation: "utf8mb3_general_ci", force: :cascade do |t|
+  create_table "listings", force: :cascade do |t|
     t.string "name"
     t.string "url"
     t.string "logo"
@@ -42,4 +42,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_13_104053) do
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_listings_on_category_id"
   end
+
+  add_foreign_key "categories", "categorygroups"
+  add_foreign_key "listings", "categories"
 end

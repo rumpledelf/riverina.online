@@ -1,2 +1,2 @@
-web: bin/rails server -p 3000
+web: bin/rails server -b 192.168.20.50 -p 3000
 css: bin/rails dartsass:watch
